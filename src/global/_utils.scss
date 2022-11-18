@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap';
+
+//MIXINS
+
+$breakpoints-up: (
+  'medium': '40em',
+  'large': '71.875em',
+  'xlarge': '87.5em',
+);
+
+// 639px, 1149px, 1399px
+$breakpoints-down: (
+  'small': '39.9375em',
+  'small-enough': '43.75em',
+  'medium': '71.8125em',
+  'large': '87.4375em',
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+//FUNCTIONS
+@function rem($px, $ratio: 16) {
+  @return ($px / $ratio) * 1rem;
+}
+
+//VARIABLES
+:root {
+  // COLORS
+  --clr-grey-1: hsl(0, 0%, 69%);
+  --clr-grey-2: hsl(0, 0%, 76%);
+  --clr-grey-3: hsl(0, 0%, 82%);
+  --clr-grey-4: hsl(0, 0%, 89%);
+  --clr-grey-5: hsl(0, 0%, 95%);
+  --clr-blue: #1e90ff;
+  --clr-blue-light: #45a0fb;
+
+  --font-primary: 'Roboto', sans-serif;
+
+  --font-300: 0.875rem; // 14 px
+  --font-400: 1rem; // 16px
+  --font-500: 1.125rem; // 18px
+  --font-600: 1.375rem; // 22px
+  --font-700: 1.625rem; // 26px
+  --font-800: 2rem; // 32px
+  --font-l: 2.5rem; // 40px
+  --font-xl: 3.125rem; // 50px
+
+  --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

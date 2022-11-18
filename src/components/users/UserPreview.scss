@@ -1,0 +1,30 @@
+@use '../../global/utils' as *;
+
+.user-preview {
+  background-color: var(--clr-grey-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: rem(15);
+  border-radius: 7px;
+  box-shadow: var(--shadow-light);
+  gap: rem(20);
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-dark);
+  }
+
+  &__avatar {
+    width: rem(75);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: var(--font-400);
+    font-weight: 400;
+  }
+}
