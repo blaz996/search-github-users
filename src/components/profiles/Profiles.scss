@@ -1,0 +1,22 @@
+@use '../../global/index' as *;
+
+.profiles {
+  height: 100%;
+  position: relative;
+}
+
+.profiles__container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(rem(170), rem(210)));
+  gap: rem(60) rem(40);
+  justify-content: center;
+  margin-top: rem(80);
+  margin-bottom: rem(100);
+
+  @include breakpoint-down('small') {
+    grid-template-columns: repeat(auto-fit, minmax(rem(100), rem(120)));
+    gap: rem(40) rem(20);
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,43 @@
+@use '../../global/index' as *;
+
+.select {
+  font-family: var(--font-primary);
+  padding: rem(10) rem(5);
+  width: rem(200);
+  height: rem(40);
+  font-size: var(--font-300);
+
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+
+  &__container {
+    position: relative;
+    display: table;
+  }
+  &__label {
+    font-size: var(--font-500);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    display: block;
+  }
+
+  &__arrow {
+    pointer-events: none;
+    width: rem(50);
+    height: rem(40);
+    position: absolute;
+    right: 0;
+    bottom: 1%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--clr-blue);
+
+    color: white;
+    font-size: var(--font-700);
+  }
+}

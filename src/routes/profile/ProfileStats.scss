@@ -1,0 +1,8 @@
+@use '../../global/index' as *;
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(450), 1fr));
+  grid-template-rows: auto;
+
+  gap: rem(40);
+}

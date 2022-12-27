@@ -1,9 +1,0 @@
-@use '../../global/utils' as *;
-
-.users {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(150), rem(220)));
-  gap: rem(30);
-  justify-content: center;
-  margin-top: rem(50);
-}

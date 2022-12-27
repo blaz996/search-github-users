@@ -1,0 +1,7 @@
+@use '../../global/index' as *;
+.container {
+  padding: rem(60) rem(40);
+  @include breakpoint-down(small) {
+    padding-inline: rem(15) !important;
+  }
+}

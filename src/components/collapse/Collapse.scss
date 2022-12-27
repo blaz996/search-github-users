@@ -1,0 +1,15 @@
+@use '../../global/index' as *;
+.collapse {
+  &--hidden {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  &--visible {
+    transition: all 0.8s;
+
+    width: 100%;
+    margin-bottom: rem(20);
+  }
+}

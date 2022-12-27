@@ -1,0 +1,29 @@
+@use '../../global/index' as *;
+
+.profile-details {
+  display: grid;
+  max-width: rem(1100);
+  margin-inline: auto;
+
+  grid-template-areas:
+    'info atributes  atributes'
+    'info following   following';
+
+  grid-template-columns: 1fr 2fr;
+
+  gap: rem(40);
+
+  @include breakpoint-down(medium) {
+    grid-template-areas:
+      'atributes atributes'
+      'info info';
+    grid-template-columns: 1fr;
+    max-width: rem(900);
+  }
+  @include breakpoint-down(small) {
+    grid-template-areas:
+      'atributes'
+      'info'
+      'following';
+  }
+}

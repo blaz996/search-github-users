@@ -1,13 +1,12 @@
 import React from 'react';
 
 import SearchBar from '../../components/search-bar/SearchBar';
-import Users from '../../components/users/Users';
+import Profiles from '../../components/profiles/Profiles';
 
 const Home = () => {
   return (
     <div className='home-page__container'>
-      <SearchBar />
-      <Users />
+      <h1>Home</h1>
     </div>
   );
 };

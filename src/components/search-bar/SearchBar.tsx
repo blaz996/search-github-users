@@ -1,6 +1,6 @@
-import React, { useState, FormEvent, useEffect } from 'react';
+import React, { useState, FormEvent } from 'react';
 
-import { getUsers } from '../../store/users/usersSlice';
+import { getProfiles } from '../../store/profiles/profilesSlice';
 import { useAppDispatch } from '../../store/hooks';
 
 import { FaSearch } from 'react-icons/fa';
@@ -15,7 +15,7 @@ const SearchBar = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(searchValue);
-    dispatch(getUsers(searchValue));
+    dispatch(getProfiles(searchValue));
   };
 
   return (
@@ -25,7 +25,7 @@ const SearchBar = () => {
         type='text'
         className='search-bar__input'
         value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
+        onChange={(e) => setSearchValue(e.target.value.trim())}
       />
       <button>
         <FaSearch className='search-bar__icon' />

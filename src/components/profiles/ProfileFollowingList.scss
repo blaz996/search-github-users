@@ -1,0 +1,23 @@
+@use '../../global/index' as *;
+
+.profile-following__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+
+  border-radius: 5px;
+  padding: rem(15) rem(30);
+  max-height: rem(350);
+  overflow-y: auto;
+  box-shadow: var(--shadow-light);
+
+  h1 {
+    font-size: var(--font-700);
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    margin-bottom: rem(10);
+    color: var(--clr-grey-1);
+  }
+}

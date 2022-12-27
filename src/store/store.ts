@@ -1,9 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-
-import usersReducer from './users/usersSlice';
+import profileSlice from './profile/profileSlice';
+import profilesReducer from './profiles/profilesSlice';
+import trendingSlice from './trending/trendingSlice';
 
 export const store = configureStore({
-  reducer: { users: usersReducer },
+  reducer: {
+    profiles: profilesReducer,
+    profile: profileSlice,
+    trends: trendingSlice,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -1,0 +1,30 @@
+@use '../../global/index' as *;
+
+.trending__header {
+  max-width: rem(1100);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: rem(60);
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    gap: rem(20);
+
+    align-items: end;
+
+    .heading--trending {
+      align-self: center;
+    }
+
+    .select {
+      align-self: flex-start;
+      width: rem(160);
+
+      &__container {
+        margin-bottom: rem(20);
+      }
+    }
+  }
+}

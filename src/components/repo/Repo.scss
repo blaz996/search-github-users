@@ -1,0 +1,18 @@
+@use '../../global/index' as *;
+
+.repo {
+  p {
+    font-size: var(--font-400);
+    word-break: break-word;
+
+    @include breakpoint-down(mobile) {
+      font-size: rem(12);
+    }
+  }
+  p:not(:first-child) {
+    justify-self: center;
+  }
+  &__name {
+    justify-self: start;
+  }
+}

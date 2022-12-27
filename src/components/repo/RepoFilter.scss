@@ -1,0 +1,43 @@
+@use '../../global/index' as *;
+
+.repo__icon {
+  position: relative;
+
+  &:not(:first-child) {
+    justify-self: center;
+  }
+
+  .icon__btn {
+    cursor: pointer;
+    background: transparent;
+    border: transparent;
+    color: var(--clr-grey-1);
+    transition: color 0.2s;
+    position: relative;
+    font-size: var(--font-400);
+    text-transform: capitalize;
+
+    &--active {
+      color: var(--clr-blue);
+    }
+    &--arrow {
+      position: absolute;
+      right: -19px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: rem(15);
+      color: var(--clr-grey-1);
+      @include breakpoint-down(mobile) {
+        right: -12px;
+        font-size: rem(12);
+      }
+    }
+
+    &--stat {
+      font-size: rem(25);
+      @include breakpoint-down(mobile) {
+        font-size: rem(18);
+      }
+    }
+  }
+}

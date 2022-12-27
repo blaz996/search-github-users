@@ -1,0 +1,40 @@
+@use '../../global/index' as *;
+.nav {
+  background-color: var(--clr-blue);
+  padding: rem(20) rem(40);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    font-size: var(--font-700);
+  }
+
+  &__links {
+    display: flex;
+    gap: rem(20);
+    margin-right: rem(40);
+
+    @include breakpoint-down(medium) {
+      margin-right: 0;
+      gap: 0;
+    }
+  }
+
+  &__link {
+    padding: rem(30) rem(20);
+
+    color: white;
+    font-size: var(--font-400);
+    font-weight: 600;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: var(--clr-blue-light);
+    }
+  }
+}

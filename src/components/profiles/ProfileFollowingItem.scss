@@ -1,0 +1,27 @@
+@use '../../global/index' as *;
+
+.profile-following__item {
+  display: flex;
+  gap: rem(20);
+  font-size: var(--font-300);
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+
+    outline: 1px solid black;
+    width: rem(50);
+
+    @include breakpoint-down(medium) {
+      width: rem(40);
+    }
+    @include breakpoint-down(mobile) {
+      width: rem(35);
+      height: rem(35);
+    }
+  }
+
+  a {
+    color: var(--clr-grey-1);
+  }
+}

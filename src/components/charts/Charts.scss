@@ -1,0 +1,18 @@
+@use '../../global/index' as *;
+.profile-chart {
+  background-color: var(--clr-grey-5);
+  padding: rem(10) rem(20);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: rem(300);
+  width: 100%;
+}

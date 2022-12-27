@@ -1,4 +1,4 @@
-@use './utils' as *;
+@use 'index' as *;
 *,
 *::before,
 *::after {
@@ -11,7 +11,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--clr-black);
-  padding: rem(20) rem(60);
+
   font-family: var(--font-primary);
 }
 
