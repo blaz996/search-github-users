@@ -3,8 +3,6 @@ import { IconBaseProps, IconType } from 'react-icons';
 
 import { Atribute } from './ProfileAtributes';
 
-import Card from '../card/Card';
-
 import './ProfileAtribute.scss';
 
 interface ProfileAtributeProps {

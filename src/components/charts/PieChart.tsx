@@ -11,7 +11,7 @@ import './Charts.scss';
 
 export type PieChartProps = {
   data: ChartData<'pie'>;
-  options?: ChartOptions;
+  options?: any;
   header: string;
 };
 

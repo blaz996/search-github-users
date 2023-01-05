@@ -7,9 +7,7 @@ import ProfileFollowingItem from './ProfileFollowingItem';
 
 import { useAppSelector } from '../../store/hooks';
 
-import Card from '../card/Card';
-import Button from '../button/Button';
-import { BUTTON_CLASS_TYPES } from '../button/Button';
+import { Button } from '../Elements';
 
 import './ProfileFollowingList.scss';
 
@@ -37,9 +35,7 @@ const ProfileFollowingList = ({
         );
       })}
       <a href={`${url}?tab=followers`}>
-        <Button classType={BUTTON_CLASS_TYPES.PRIMARY}>
-          View all {title}{' '}
-        </Button>
+        <Button>View all {title}</Button>
       </a>
     </div>
   );

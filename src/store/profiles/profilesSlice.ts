@@ -5,11 +5,9 @@ import {
   EmptyObject,
 } from '@reduxjs/toolkit';
 
-import { itemsPerPage } from '../../components/pagionation/Pagination';
+import paginate from '../../utils/paginate';
 
 import { fetchUsers, ProfilePreview } from '../../api/profilesApi';
-
-import paginate from '../../utils/paginate';
 
 export type ProfilesState = {
   profiles: ProfilePreview[][];
@@ -20,6 +18,7 @@ export type ProfilesState = {
 export const initialState: ProfilesState = {
   profiles: [[]],
   isLoading: false,
+
   error: {},
 };
 
@@ -39,8 +38,9 @@ const profilesSlice = createSlice({
     });
 
     builder.addCase(getProfiles.fulfilled, (state, action) => {
+      console.log('called');
       state.isLoading = false;
-      state.profiles = paginate(action.payload, itemsPerPage);
+      state.profiles = paginate(action.payload, 10);
     });
 
     builder.addCase(getProfiles.rejected, (state, action) => {

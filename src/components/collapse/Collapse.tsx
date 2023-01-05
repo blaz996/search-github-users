@@ -4,8 +4,7 @@ import { useToogle } from '../../hooks/useToogle';
 
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri';
 
-import Button from '../button/Button';
-import { BUTTON_CLASS_TYPES } from '../button/Button';
+import { Button } from '../Elements';
 
 import './Collapse.scss';
 
@@ -26,7 +25,7 @@ const Collapse = ({ height, children }: Collapse) => {
         {children}
       </div>
 
-      <Button onClick={setIsVisible} classType={BUTTON_CLASS_TYPES.COLLAPSE}>
+      <Button onClick={setIsVisible}>
         {isVisible ? <RiArrowUpSFill /> : <RiArrowDownSFill />}
       </Button>
     </>

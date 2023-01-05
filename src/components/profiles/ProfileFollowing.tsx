@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useAppSelector } from '../../store/hooks';
 
-import Card from '../card/Card';
 import ProfileFollowingList from './ProfileFollowingList';
 
 import './ProfileFollowing.scss';

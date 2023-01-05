@@ -6,6 +6,16 @@ import { FaGithub } from 'react-icons/fa';
 
 import './Navbar.scss';
 
+type NavLinks = {
+  name: string;
+  url: string;
+  icon?: React.Component;
+};
+
+type NavBarProps = {
+  links: NavLinks;
+};
+
 const Navbar = () => {
   return (
     <nav className='nav'>

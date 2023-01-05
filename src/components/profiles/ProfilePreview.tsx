@@ -8,8 +8,7 @@ import { fetchUser } from '../../api/profileApi';
 
 import { Link } from 'react-router-dom';
 
-import Button from '../button/Button';
-import { BUTTON_CLASS_TYPES } from '../button/Button';
+import { Button } from '../Elements';
 
 import './ProfilePreview.scss';
 
@@ -18,17 +17,20 @@ export type ProfilePreviewProps = {
   avatar_url: string;
 };
 
-const ProfilePreview = ({ login, avatar_url }: ProfilePreviewProps) => {
+const ProfilePreview = ({
+  login: loginName,
+  avatar_url,
+}: ProfilePreviewProps) => {
   const dispatch = useAppDispatch();
+  const navigateToProfile = () => {
+    dispatch(getProfile(loginName));
+  };
   return (
     <div className='profile-preview'>
       <img className='profile-preview__avatar' src={avatar_url} alt='' />
-      <h3 className='profile-preview__name'>{login}</h3>
-      <Link to={`profile/${login}`}>
-        <Button
-          onClick={() => dispatch(getProfile(login))}
-          classType={BUTTON_CLASS_TYPES.PRIMARY}
-        >
+      <h3 className='profile-preview__name'>{loginName}</h3>
+      <Link to={`/profile/${loginName}`}>
+        <Button onClick={() => dispatch(getProfile(loginName))} size='small'>
           View Profile
         </Button>
       </Link>

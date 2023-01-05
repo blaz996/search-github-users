@@ -9,8 +9,7 @@ import Container from '../../components/container/Container';
 import ProfileDetails from './ProfileDetails';
 import ProfileRepos from './ProfileRepos';
 import ProfilePage from '../../components/profiles/ProfilePage';
-import Button from '../../components/button/Button';
-import { BUTTON_CLASS_TYPES } from '../../components/button/Button';
+import { Button } from '@/components/Elements';
 
 import ProfileStats from './ProfileStats';
 

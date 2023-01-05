@@ -6,6 +6,8 @@ import { authHeader } from './api-utils';
 
 import { fetchGitHubData } from './api-utils';
 
+import { FieldValues } from 'react-hook-form';
+
 export const SEARCH_USERS_URL = GITHUBAPI_BASE_URL + 'search/users';
 
 export interface ProfilePreview {
@@ -16,6 +18,7 @@ export interface ProfilePreview {
 }
 
 export const fetchUsers = async (searchName: string) => {
+  console.log('called');
   const { items } = await fetchGitHubData(
     GITHUBAPI_BASE_URL,
     '',
